@@ -1,12 +1,10 @@
-class Language < ApplicationRecord
+class RelevantLink < ApplicationRecord
   # Includes
 
   # Attributes
 
   # Associations
-  has_many :contacts, dependent: :destroy
-  has_many :relevant_links, dependent: :destroy
-  
+  belongs_to :language
   # Delegates
 
   # Constants

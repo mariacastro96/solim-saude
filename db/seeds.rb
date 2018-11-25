@@ -24,10 +24,10 @@ Language.create!([
   }
 ])
 Language.all.each do |language|
-  puts "  > #{language.language} language created"
+  puts "  > [#{language.language}] language created"
 end
 
-puts "1. Creating Contacts"
+puts "2. Creating Contacts"
 
   Contact.create!([
     {
@@ -72,5 +72,37 @@ puts "1. Creating Contacts"
     }
   ])
 Contact.all.each do |contact|
-  puts "  > #{contact.name} created"
+  puts "  > [#{contact.name}] created"
+end
+
+puts "3. Creating Links"
+
+  RelevantLink.create!([
+    {
+      code: 'external',
+      name: 'SNS',
+      link: 'https://www.sns.gov.pt/sns/servico-nacional-de-saude/',
+      language: Language.find_by(code: 'PT')
+    },
+    {
+      code: 'external',
+      name: 'SNS - Healthcare',
+      link: 'https://www.sns.gov.pt/sns/servico-nacional-de-saude/',
+      language: Language.find_by(code: 'ENG')
+    },
+    {
+      code: 'internal',
+      name: 'Solidariedade Imigrante',
+      link: 'http://www.solimigrante.org/',
+      language: Language.find_by(code: 'PT')
+    },
+    {
+      code: 'internal',
+      name: 'Solidariedade Imigrante - Organization',
+      link: 'http://www.solimigrante.org/',
+      language: Language.find_by(code: 'ENG')
+    }
+  ])
+RelevantLink.all.each do |link|
+  puts "  > [#{link.name}] created"
 end

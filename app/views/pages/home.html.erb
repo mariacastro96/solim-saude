@@ -13,3 +13,11 @@
   > <%= contact.name %> <br/>
   <% end %>
 </h4>
+
+<h4>
+  Links:
+  <br/>
+  <% RelevantLink.all.each do |link| %>
+  > <%= link.name %> <br/>
+  <% end %>
+</h4>
