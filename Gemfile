@@ -16,9 +16,10 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+gem 'lorem_ipsum_amet', '~> 0.6.2'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
-  gem 'lorem_ipsum_amet', '~> 0.6.2'
 end
 
 group :development, :test do
