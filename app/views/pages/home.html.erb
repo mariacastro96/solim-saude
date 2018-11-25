@@ -5,3 +5,11 @@
   > <%= language.language %> <br/>
   <% end %>
 </h4>
+
+<h4>
+  Contacts:
+  <br/>
+  <% Contact.all.each do |contact| %>
+  > <%= contact.name %> <br/>
+  <% end %>
+</h4>

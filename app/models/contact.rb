@@ -1,10 +1,11 @@
-class Language < ApplicationRecord
+class Contact < ApplicationRecord
   # Includes
 
   # Attributes
 
   # Associations
-  has_many :contacts, dependent: :destroy
+  belongs_to :language
+  
   # Delegates
 
   # Constants
