@@ -107,7 +107,7 @@ RelevantLink.create!([
   },
   {
     code: 'internal',
-    name: 'Solidariedade Imigrante - Organization',
+    name: 'Solidariedade Imigrante',
     link: 'http://www.solimigrante.org/',
     language: Language.find_by(code: 'ENG')
   }
