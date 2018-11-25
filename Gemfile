@@ -18,6 +18,7 @@ gem 'webpacker'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'lorem_ipsum_amet', '~> 0.6.2'
 end
 
 group :development, :test do

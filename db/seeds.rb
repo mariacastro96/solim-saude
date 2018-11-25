@@ -8,6 +8,8 @@
 puts "Cleaning seeds"
 Language.destroy_all
 Contact.destroy_all
+RelevantLink.destroy_all
+Statement.destroy_all
 
 puts "1. Creating Languages"
 
@@ -105,4 +107,48 @@ puts "3. Creating Links"
   ])
 RelevantLink.all.each do |link|
   puts "  > [#{link.name}] created"
+end
+
+puts "4. Creating Statements"
+
+Statement.create!([
+  {
+    code: 'solim',
+    title: 'Quem somos?',
+    text: LoremIpsum.random(paragraphs: 4),
+    language: Language.find_by(code: 'PT')
+  },
+  {
+    code: 'solim',
+    title: 'Who we are',
+    text: LoremIpsum.random(paragraphs: 4),
+    language: Language.find_by(code: 'ENG')
+  },
+  {
+    code: 'solim',
+    title: 'O que fazemos?',
+    text: LoremIpsum.random(paragraphs: 4),
+    language: Language.find_by(code: 'PT')
+  },
+  {
+    code: 'solim',
+    title: 'What we do',
+    text: LoremIpsum.random(paragraphs: 4),
+    language: Language.find_by(code: 'ENG')
+  },
+  {
+    code: 'projeto',
+    title: 'Projeto - Saúde',
+    text: LoremIpsum.random(paragraphs: 4),
+    language: Language.find_by(code: 'PT')
+  },
+  {
+    code: 'projeto',
+    title: 'Project - Health',
+    text: LoremIpsum.random(paragraphs: 4),
+    language: Language.find_by(code: 'ENG')
+  }
+])
+Statement.all.each do |statement|
+  puts "  > [#{statement.text}] created"
 end

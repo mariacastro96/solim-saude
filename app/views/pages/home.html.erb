@@ -21,3 +21,12 @@
   > <%= link.name %> <br/>
   <% end %>
 </h4>
+
+<h4>
+  Links:
+  <br/>
+  <% Statement.all.each do |statement| %>
+  > <%= statement.title %> <br/>
+  > <%= statement.text %> <br/>
+  <% end %>
+</h4>
