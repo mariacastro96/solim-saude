@@ -1,0 +1,28 @@
+<div id="navbar">
+  <div class="navbar__container">
+    <div class="navbar__logo">
+      <%= image_tag 'logo.svg' %>
+    </div>
+    <div class="navbar__links hidden-xs hidden-sm">
+      <div class="navbar__link">
+        <%= link_to t('navbar.organization'), '#' %>
+      </div>
+      <div class="navbar__link">
+        <%= link_to t('navbar.project'), '#' %>
+      </div>
+      <div class="navbar__link">
+        <%= link_to t('navbar.questions'), '#' %>
+      </div>
+    </div>
+      <div class="navbar__links-box hidden-md hidden-lg">
+        <div class="dropdown">
+          <i class="fal fa-bars fa-2x dropdown-toggle" data-toggle="dropdown"></i>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><%= link_to t('navbar.organization'), '#' %></li>
+            <li><%= link_to t('navbar.project'), '#' %></li>
+            <li><%= link_to t('navbar.questions'), '#' %></li>
+          </ul>
+        </div>
+      </div>
+  </div>
+</div>

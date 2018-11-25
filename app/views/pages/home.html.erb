@@ -1,15 +1,21 @@
+<%= t(:hello) %><br/>
+<%= I18n.locale %> <br/>
+
+
 <h4>
   Languages:
   <br/>
   <% Language.all.each do |language| %>
   > <%= language.language %> <br/>
   <% end %>
+  <%= link_to 'eng', root_path(:en) %><br/>
+  <%= link_to 'pt', root_path %><br/>
 </h4>
-
+<% current_language = Language.find_by(language_id: I18n.locale ) -%>
 <h4>
   Contacts:
   <br/>
-  <% Contact.all.each do |contact| %>
+  <% Contact.where(language: current_language).each do |contact| %>
   > <%= contact.name %> <br/>
   <% end %>
 </h4>
@@ -17,7 +23,7 @@
 <h4>
   Links:
   <br/>
-  <% RelevantLink.all.each do |link| %>
+  <% RelevantLink.where(language: current_language).each do |link| %>
   > <%= link.name %> <br/>
   <% end %>
 </h4>
@@ -25,7 +31,7 @@
 <h4>
   Statements:
   <br/>
-  <% Statement.all.each do |statement| %>
+  <% Statement.where(language: current_language).each do |statement| %>
   > <%= statement.title %> <br/>
   > <%= statement.text %> <br/>
   <% end %>
@@ -34,40 +40,27 @@
 <h4>
   Topics:
   <br/>
-  <% QuestionTopic.all.each do |topic| %>
+  <% QuestionTopic.where(language: current_language).each do |topic| %>
   > <%= topic.name %> <br/>
+    <% topic.questions.each do |question| %>
+    > <%= question.question %> <br/>
+    > <%= question.answer %> <br/>
+    <% end %>
   <% end %>
 </h4>
 
-<h4>
-  Questions:
-  <br/>
-  <% Question.all.each do |question| %>
-  > <%= question.question %> <br/>
-  > <%= question.answer %> <br/>
-  <% end %>
-</h4>
+
 
 <h4>
   Study:
   <br/>
-  <% Study.all.each do |study| %>
+  <% Study.where(language: current_language).each do |study| %>
   > <%= study.title %> <br/>
-  <% end %>
-</h4>
-
-<h4>
-  Study Fields:
-  <br/>
-  <% StudyField.all.each do |field| %>
-  > <%= field.title %> <br/>
-  <% end %>
-</h4>
-
-<h4>
-  Study Variables:
-  <br/>
-  <% StudyVariable.all.each do |variable| %>
-  > <%= variable.name %>( <%= variable.study_field.title %> ) <br/>
+    <% study.study_fields.each do |field| %>
+    > <%= field.title %> <br/>
+      <% field.study_variables.each do |variable| %>
+      > <%= variable.name %>( <%= variable.study_field.title %> ) <br/>
+      <% end %>
+    <% end %>
   <% end %>
 </h4>
