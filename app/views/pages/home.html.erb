@@ -55,3 +55,11 @@
   > <%= study.title %> <br/>
   <% end %>
 </h4>
+
+<h4>
+  Study Fields:
+  <br/>
+  <% StudyField.all.each do |field| %>
+  > <%= field.title %> <br/>
+  <% end %>
+</h4>

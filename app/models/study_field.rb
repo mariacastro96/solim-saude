@@ -1,11 +1,11 @@
-class Study < ApplicationRecord
+class StudyField < ApplicationRecord
   # Includes
 
   # Attributes
 
   # Associations
-  belongs_to :language
-  has_many :study_fields, dependent: :destroy
+  belongs_to :study
+  
   # Delegates
 
   # Constants

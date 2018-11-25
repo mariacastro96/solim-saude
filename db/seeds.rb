@@ -276,3 +276,53 @@ Study.create!([
 Study.all.each do |study|
   puts "  > [#{study.title}] created"
 end
+
+puts "8. Creating Study fields"
+
+StudyField.create!([
+  {
+    code: 'SF1',
+    title: 'Campo de Estudo 1',
+    subtitle: 'Breve explicação',
+    total_value: 100,
+    study: Language.find_by(code: 'PT').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF1',
+    title: 'Study Field 1',
+    subtitle: 'Brief explanation',
+    total_value: 100,
+    study: Language.find_by(code: 'ENG').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF2',
+    title: 'Campo de Estudo 2',
+    subtitle: 'Breve explicação',
+    total_value: 100,
+    study: Language.find_by(code: 'PT').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF2',
+    title: 'Study Field 2',
+    subtitle: 'Brief explanation',
+    total_value: 100,
+    study: Language.find_by(code: 'ENG').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF3',
+    title: 'Campo de Estudo 3',
+    subtitle: 'Breve explicação',
+    total_value: 100,
+    study: Language.find_by(code: 'PT').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF3',
+    title: 'Study Field 3',
+    subtitle: 'Brief explanation',
+    total_value: 100,
+    study: Language.find_by(code: 'ENG').studies.find_by(code: 'S1')
+  },
+])
+StudyField.all.each do |field|
+  puts "  > [#{field.title}] created"
+end
