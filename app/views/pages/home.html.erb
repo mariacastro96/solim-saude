@@ -63,3 +63,11 @@
   > <%= field.title %> <br/>
   <% end %>
 </h4>
+
+<h4>
+  Study Variables:
+  <br/>
+  <% StudyVariable.all.each do |variable| %>
+  > <%= variable.name %>( <%= variable.study_field.title %> ) <br/>
+  <% end %>
+</h4>

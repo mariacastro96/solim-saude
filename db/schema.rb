@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_25_104222) do
+ActiveRecord::Schema.define(version: 2018_11_25_105043) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,6 +97,17 @@ ActiveRecord::Schema.define(version: 2018_11_25_104222) do
     t.index ["study_id"], name: "index_study_fields_on_study_id"
   end
 
+  create_table "study_variables", force: :cascade do |t|
+    t.string "code", null: false
+    t.string "name", null: false
+    t.float "value", null: false
+    t.float "percentage", null: false
+    t.bigint "study_field_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["study_field_id"], name: "index_study_variables_on_study_field_id"
+  end
+
   add_foreign_key "contacts", "languages"
   add_foreign_key "question_topics", "languages"
   add_foreign_key "questions", "question_topics"
@@ -104,4 +115,5 @@ ActiveRecord::Schema.define(version: 2018_11_25_104222) do
   add_foreign_key "statements", "languages"
   add_foreign_key "studies", "languages"
   add_foreign_key "study_fields", "studies"
+  add_foreign_key "study_variables", "study_fields"
 end

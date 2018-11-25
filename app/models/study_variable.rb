@@ -1,11 +1,10 @@
-class StudyField < ApplicationRecord
+class StudyVariable < ApplicationRecord
   # Includes
 
   # Attributes
 
   # Associations
-  belongs_to :study
-  has_many :study_variables, dependent: :destroy
+  belongs_to :study_field
 
   # Delegates
 
@@ -16,10 +15,14 @@ class StudyField < ApplicationRecord
   # Scopes
 
   # Callbacks
-
+  after_initialize :init
   # Constants Methods
 
   # Default
 
   private
+
+  def init
+    self.percentage ||= value/study_field.total_value
+  end
 end

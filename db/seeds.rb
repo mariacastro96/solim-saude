@@ -326,3 +326,83 @@ StudyField.create!([
 StudyField.all.each do |field|
   puts "  > [#{field.title}] created"
 end
+
+puts "9. Creating Variables"
+
+StudyVariable.create!([
+  {
+    code: 'V1',
+    name: 'Variavel 1',
+    value: 20,
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF1')
+  },
+  {
+    code: 'V1',
+    name: 'Variable 1',
+    value: 20,
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF1')
+  },
+  {
+    code: 'V2',
+    name: 'Variavel 2',
+    value: 80,
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF1')
+  },
+  {
+    code: 'V2',
+    name: 'Variable 2',
+    value: 80,
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF1')
+  },
+  {
+    code: 'V1',
+    name: 'Variavel 1',
+    value: 20,
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
+  },
+  {
+    code: 'V1',
+    name: 'Variable 1',
+    value: 20,
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
+  },
+  {
+    code: 'V2',
+    name: 'Variavel 2',
+    value: 80,
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
+  },
+  {
+    code: 'V2',
+    name: 'Variable 2',
+    value: 80,
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
+  },
+  {
+    code: 'V1',
+    name: 'Variavel 1',
+    value: 20,
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF3')
+  },
+  {
+    code: 'V1',
+    name: 'Variable 1',
+    value: 20,
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF3')
+  },
+  {
+    code: 'V2',
+    name: 'Variavel 2',
+    value: 80,
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF3')
+  },
+  {
+    code: 'V2',
+    name: 'Variable 2',
+    value: 80,
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF3')
+  }
+])
+StudyVariable.all.each do |variable|
+  puts "  > [#{variable.name}] created"
+end
