@@ -150,5 +150,53 @@ Statement.create!([
   }
 ])
 Statement.all.each do |statement|
-  puts "  > [#{statement.text}] created"
+  puts "  > [#{statement.title}] created"
+end
+
+puts "5. Creating Topics"
+
+QuestionTopic.create!([
+  {
+    code: 'T1',
+    name: 'Tópico 1',
+    language: Language.find_by(code: 'PT')
+  },
+  {
+    code: 'T1',
+    name: 'Topic 1',
+    language: Language.find_by(code: 'ENG')
+  },
+  {
+    code: 'T2',
+    name: 'Tópico 2',
+    language: Language.find_by(code: 'PT')
+  },
+  {
+    code: 'T2',
+    name: 'Topic 2',
+    language: Language.find_by(code: 'ENG')
+  },
+  {
+    code: 'T3',
+    name: 'Tópico 3',
+    language: Language.find_by(code: 'PT')
+  },
+  {
+    code: 'T3',
+    name: 'Topic 3',
+    language: Language.find_by(code: 'ENG')
+  },
+  {
+    code: 'T4',
+    name: 'Tópico 4',
+    language: Language.find_by(code: 'PT')
+  },
+  {
+    code: 'T4',
+    name: 'Topic 4',
+    language: Language.find_by(code: 'ENG')
+  }
+])
+QuestionTopic.all.each do |topic|
+  puts "  > [#{topic.name}] created"
 end

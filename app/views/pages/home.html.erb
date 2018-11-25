@@ -23,10 +23,18 @@
 </h4>
 
 <h4>
-  Links:
+  Statements:
   <br/>
   <% Statement.all.each do |statement| %>
   > <%= statement.title %> <br/>
   > <%= statement.text %> <br/>
+  <% end %>
+</h4>
+
+<h4>
+  Topics:
+  <br/>
+  <% QuestionTopic.all.each do |topic| %>
+  > <%= topic.name %> <br/>
   <% end %>
 </h4>
