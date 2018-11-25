@@ -22,12 +22,14 @@ Language.create!([
   {
     code: 'PT',
     country: 'Portugal',
-    language: 'portuguese'
+    language: 'portuguese',
+    language_id: 'pt'
   },
   {
     code: 'ENG',
     country: 'England',
-    language: 'english'
+    language: 'english',
+    language_id: 'en'
   }
 ])
 Language.all.each do |language|
