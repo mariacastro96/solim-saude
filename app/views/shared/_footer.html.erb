@@ -1,0 +1,73 @@
+<div id="footer">
+  <div class="footer__container hidden-xs">
+    <div class="footer__items">
+
+      <div class="footer__item">
+        <p class="footer__item-title"> <%= t('footer.relevant_links') %></p>
+        <% RelevantLink.where(language: Current.language).each do |link| %>
+          <%= link_to link.name, link.link, class: 'footer__item-content' %> <br/>
+        <% end %>
+      </div>
+
+      <div class="footer__item">
+        <p class="footer__item-title"> <%= t('footer.follow') %></p>
+        <%= link_to 'Facebook', '#', class: 'footer__item-content' %> <br/>
+        <%= link_to 'Twitter', '#', class: 'footer__item-content' %> <br/>
+      </div>
+
+      <% Contact.where(language: Current.language).each do |contact| %>
+        <div class="footer__item">
+          <p class="footer__item-title"><%= contact.name %></p>
+          <p class="footer__item-content"><%= contact.address %></p>
+          <p class="footer__item-content"><%= contact.zip_code %></p>
+          <p class="footer__item-content"><%= contact.email %></p>
+          <p class="footer__item-content"><%= contact.phone %></p>
+          <p class="footer__item-content"><%= contact.schedule %></p>
+        </div>
+      <% end %>
+
+    </div>
+    <div class="footer__separation"></div>
+    <div class="footer__conclusion">
+      <span class="footer__conclusion-entity">Solidariedade Imigrante</span>
+      <%  I18n.available_locales.each do |locale| %>
+        <span class="footer__conclusion-language"><%= link_to locale, root_path(locale) %></span>
+      <% end %>
+    </div>
+  </div>
+  <div class="footer__container-small hidden-sm hidden-md hidden-lg">
+    <div class="footer__items">
+      <div class="footer__item">
+        <p class="footer__item-title"> <%= t('footer.relevant_links') %></p>
+        <% RelevantLink.where(language: Current.language).each do |link| %>
+          <%= link_to link.name, link.link, class: 'footer__item-content' %> <br/>
+        <% end %>
+      </div>
+
+      <div class="footer__item">
+        <p class="footer__item-title"> <%= t('footer.follow') %></p>
+        <%= link_to 'Facebook', '#', class: 'footer__item-content' %> <br/>
+        <%= link_to 'Twitter', '#', class: 'footer__item-content' %> <br/>
+      </div>
+
+      <% Contact.where(language: Current.language).each do |contact| %>
+        <div class="footer__item">
+          <p class="footer__item-title"><%= contact.name %></p>
+          <p class="footer__item-content"><%= contact.address %></p>
+          <p class="footer__item-content"><%= contact.zip_code %></p>
+          <p class="footer__item-content"><%= contact.email %></p>
+          <p class="footer__item-content"><%= contact.phone %></p>
+          <p class="footer__item-content"><%= contact.schedule %></p>
+        </div>
+      <% end %>
+    </div>
+    <div class="footer__separation">
+    </div>
+    <div class="footer__conclusion">
+      <span class="footer__conclusion-entity">Solidariedade Imigrante</span>
+      <%  I18n.available_locales.each do |locale| %>
+        <span class="footer__conclusion-language"><%= link_to locale, root_path(locale) %></span>
+      <% end %>
+    </div>
+  </div>
+</div>

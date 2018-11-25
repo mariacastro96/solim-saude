@@ -1,5 +1,6 @@
 <%= t(:hello) %><br/>
 <%= I18n.locale %> <br/>
+<%= Current.language.code %> <br/>
 
 
 <h4>
@@ -11,7 +12,8 @@
   <%= link_to 'eng', root_path(:en) %><br/>
   <%= link_to 'pt', root_path %><br/>
 </h4>
-<% current_language = Language.find_by(language_id: I18n.locale ) -%>
+<% current_language = Language.find_by(language_id: I18n.locale ) %>
+
 <h4>
   Contacts:
   <br/>
