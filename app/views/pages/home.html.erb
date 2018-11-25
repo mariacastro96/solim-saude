@@ -44,5 +44,14 @@
   <br/>
   <% Question.all.each do |question| %>
   > <%= question.question %> <br/>
+  > <%= question.answer %> <br/>
+  <% end %>
+</h4>
+
+<h4>
+  Study:
+  <br/>
+  <% Study.all.each do |study| %>
+  > <%= study.title %> <br/>
   <% end %>
 </h4>

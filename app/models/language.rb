@@ -8,6 +8,7 @@ class Language < ApplicationRecord
   has_many :relevant_links, dependent: :destroy
   has_many :statements, dependent: :destroy
   has_many :question_topics, dependent: :destroy
+  has_many :studies, dependent: :destroy
 
   # Delegates
 

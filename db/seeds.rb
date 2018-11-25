@@ -201,7 +201,7 @@ QuestionTopic.all.each do |topic|
   puts "  > [#{topic.name}] created"
 end
 
-puts "5. Creating Questions"
+puts "6. Creating Questions"
 
 Question.create!([
   {
@@ -255,4 +255,24 @@ Question.create!([
 ])
 Question.all.each do |question|
   puts "  > [#{question.question}] created"
+end
+
+puts "7. Creating Studies"
+
+Study.create!([
+  {
+    code: 'S1',
+    title: 'Estudo 1',
+    subtitle: 'Breve explicação sobre o estudo',
+    language: Language.find_by(code: 'PT')
+  },
+  {
+    code: 'S1',
+    title: 'Study 1',
+    subtitle: 'Brief explanation about the study',
+    language: Language.find_by(code: 'ENG')
+  }
+])
+Study.all.each do |study|
+  puts "  > [#{study.title}] created"
 end
