@@ -5,3 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Cleaning seeds"
+Language.destroy_all
+
+puts "1. Creating Languages"
+
+Language.create!([
+  {
+    code: 'PT',
+    country: 'Portugal',
+    language: 'portuguese'
+  },
+  {
+    code: 'ENG',
+    country: 'England',
+    language: 'english'
+  }
+])
+Language.all.each do |language|
+  puts "  > #{language.language} language created"
+end
