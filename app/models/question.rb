@@ -1,11 +1,11 @@
-class QuestionTopic < ApplicationRecord
+class Question < ApplicationRecord
   # Includes
 
   # Attributes
 
   # Associations
-  belongs_to :language
-  has_many :questions, dependent: :destroy
+  belongs_to :question_topic
+  
   # Delegates
 
   # Constants

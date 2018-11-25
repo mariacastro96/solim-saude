@@ -38,3 +38,11 @@
   > <%= topic.name %> <br/>
   <% end %>
 </h4>
+
+<h4>
+  Questions:
+  <br/>
+  <% Question.all.each do |question| %>
+  > <%= question.question %> <br/>
+  <% end %>
+</h4>

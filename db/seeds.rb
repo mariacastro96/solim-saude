@@ -159,7 +159,7 @@ QuestionTopic.create!([
   {
     code: 'T1',
     name: 'Tópico 1',
-    language: Language.find_by(code: 'PT')
+    language: Language.find_by(code: 'PT'),
   },
   {
     code: 'T1',
@@ -199,4 +199,60 @@ QuestionTopic.create!([
 ])
 QuestionTopic.all.each do |topic|
   puts "  > [#{topic.name}] created"
+end
+
+puts "5. Creating Questions"
+
+Question.create!([
+  {
+    code: 'Q1',
+    question: 'Pergunta 1',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q1',
+    question: 'Question 1',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q2',
+    question: 'Pergunta 2',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T2')
+  },
+  {
+    code: 'Q2',
+    question: 'Question 2',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T2')
+  },
+  {
+    code: 'Q3',
+    question: 'Pergunta 3',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T3')
+  },
+  {
+    code: 'Q3',
+    question: 'Question 3',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T3')
+  },
+  {
+    code: 'Q4',
+    question: 'Pergunta 4',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T4')
+  },
+  {
+    code: 'Q4',
+    question: 'Question 4',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T4')
+  },
+])
+Question.all.each do |question|
+  puts "  > [#{question.question}] created"
 end
