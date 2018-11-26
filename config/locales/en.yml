@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  footer:
+    relevant_links: 'Relevant Links'
+    follow: 'Follow'

@@ -31,3 +31,6 @@
 
 pt:
   hello: "Olá Mundo"
+  footer:
+    relevant_links: 'Links Relevantes'
+    follow: 'Siga-nos'
