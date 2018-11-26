@@ -1,20 +1,6 @@
 <div id="footer">
   <div class="footer__container hidden-xs">
     <div class="footer__items">
-
-      <div class="footer__item">
-        <p class="footer__item-title"> <%= t('footer.relevant_links') %></p>
-        <% RelevantLink.where(language: Current.language).each do |link| %>
-          <%= link_to link.name, link.link, class: 'footer__item-content' %> <br/>
-        <% end %>
-      </div>
-
-      <div class="footer__item">
-        <p class="footer__item-title"> <%= t('footer.follow') %></p>
-        <%= link_to 'Facebook', '#', class: 'footer__item-content' %> <br/>
-        <%= link_to 'Twitter', '#', class: 'footer__item-content' %> <br/>
-      </div>
-
       <% Contact.where(language: Current.language).each do |contact| %>
         <div class="footer__item">
           <p class="footer__item-title"><%= contact.name %></p>
@@ -25,7 +11,17 @@
           <p class="footer__item-content"><%= contact.schedule %></p>
         </div>
       <% end %>
-
+      <div class="footer__item">
+        <p class="footer__item-title"> <%= t('footer.relevant_links') %></p>
+        <% RelevantLink.where(language: Current.language).each do |link| %>
+          <%= link_to link.name, link.link, class: 'footer__item-content' %> <br/>
+        <% end %>
+      </div>
+      <div class="footer__item">
+        <p class="footer__item-title"> <%= t('footer.follow') %></p>
+        <%= link_to 'Facebook', '#', class: 'footer__item-content' %> <br/>
+        <%= link_to 'Twitter', '#', class: 'footer__item-content' %> <br/>
+      </div>
     </div>
     <div class="footer__separation"></div>
     <div class="footer__conclusion">
