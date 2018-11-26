@@ -34,3 +34,7 @@ en:
   footer:
     relevant_links: 'Relevant Links'
     follow: 'Follow'
+  navbar:
+    organization: 'Organization'
+    project: 'Project'
+    questions: 'Questions'
