@@ -3,5 +3,6 @@ Rails.application.routes.draw do
     root to: 'pages#home'
     get 'solim', to: 'pages#solim'
     get 'project', to: 'pages#project'
+    get 'questions', to: 'pages#questions'
    end
 end

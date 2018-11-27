@@ -1,0 +1,30 @@
+<% numbers = ['zero', 'one', 'two', 'three', 'four'] %>
+
+<div id="questions">
+  <div class="questions__container">
+    <div class="questions__tab-header">
+      <% Current.language.question_topics.each_with_index do |topic, index| %>
+        <div class="questions__tab-title" data-tab="tab-<%= numbers[index + 1] %>">
+          <p><%= topic.name %></p>
+        </div>
+      <% end %>
+    </div>
+    <div id="questions__tab-division" data-tab-division="tab-one"></div>
+    <div class="questions__tab-body">
+      <% Current.language.question_topics.each_with_index do |topic, index| %>
+        <div class="questions__tab-content <%= '--body-active' if index == 0 %>" data-tab-active="tab-<%= numbers[index + 1] %>">
+          <% topic.questions.each do |question| %>
+          <div class="questions__tab-questions">
+            <div class="questions__tab-question">
+              <p><%= question.question %></p>
+            </div>
+            <div class="questions__tab-answer">
+              <p><%= question.answer %></p>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
