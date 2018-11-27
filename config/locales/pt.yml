@@ -38,3 +38,5 @@ pt:
     organization: 'Organização'
     project: 'Projeto'
     questions: 'Perguntas'
+  project:
+    study: 'Estudo'
