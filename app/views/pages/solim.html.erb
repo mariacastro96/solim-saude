@@ -1,0 +1,19 @@
+<div id="solim">
+  <div class="solim__container">
+    <div class="solim__tab-header">
+      <% Current.language.statements.where(code: 'solim').each_with_index do |statement, index| %>
+        <div class="solim__tab-title" data-tab="tab-<%= index + 1 %>">
+          <p><%= statement.title %></p>
+        </div>
+      <% end %>
+    </div>
+    <div class="solim__tab-division" data-tab-division="tab-1"></div>
+    <div class="solim__tab-body">
+      <% Current.language.statements.where(code: 'solim').each_with_index do |statement, index| %>
+        <div class="solim__tab-content <%= '--body-active' if index == 0 %>" data-tab-active="tab-<%= index + 1 %>">
+          <p><%= statement.text %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
