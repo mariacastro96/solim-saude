@@ -38,3 +38,5 @@ en:
     organization: 'Organization'
     project: 'Project'
     questions: 'Questions'
+  project:
+    study: 'Study'

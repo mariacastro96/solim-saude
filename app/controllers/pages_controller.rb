@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def solim
   end
+  
+  def project
+  end
 end

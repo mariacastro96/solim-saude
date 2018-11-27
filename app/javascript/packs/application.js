@@ -10,5 +10,8 @@ import "bootstrap";
 //
 // });
 
-import { tabAnimation } from '../components/solim';
-tabAnimation();
+import { tabSolim } from '../components/solim';
+tabSolim();
+
+import { tabProject } from '../components/project';
+tabProject();
