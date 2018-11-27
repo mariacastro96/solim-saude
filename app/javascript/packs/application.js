@@ -15,3 +15,6 @@ tabSolim();
 
 import { tabProject } from '../components/project';
 tabProject();
+
+import { tabQuestions } from '../components/questions';
+tabQuestions();

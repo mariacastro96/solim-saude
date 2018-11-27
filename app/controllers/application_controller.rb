@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale
   before_action :set_current_language
-
+  
   private
 
   def set_locale
