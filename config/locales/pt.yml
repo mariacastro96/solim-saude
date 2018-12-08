@@ -35,7 +35,7 @@ pt:
     relevant_links: 'Links Relevantes'
     follow: 'Siga-nos'
   navbar:
-    organization: 'Organização'
+    association: 'Associação'
     project: 'Projeto'
     questions: 'Perguntas'
   project:

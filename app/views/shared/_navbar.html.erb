@@ -5,22 +5,22 @@
     </div>
     <div class="navbar__links hidden-xs hidden-sm">
       <div class="navbar__link">
-        <%= link_to t('navbar.organization'), solim_path(I18n.locale) %>
+        <%= link_to t('navbar.association'), solim_path(I18n.locale) %>
       </div>
       <div class="navbar__link">
         <%= link_to t('navbar.project'), project_path(I18n.locale) %>
       </div>
       <div class="navbar__link">
-        <%= link_to t('navbar.questions'), '#' %>
+        <%= link_to t('navbar.questions'), questions_path(I18n.locale) %>
       </div>
     </div>
       <div class="navbar__links-box hidden-md hidden-lg">
         <div class="dropdown">
           <i class="fal fa-bars fa-2x dropdown-toggle" data-toggle="dropdown"></i>
           <ul class="dropdown-menu dropdown-menu-right">
-            <li><%= link_to t('navbar.organization'), '#' %></li>
-            <li><%= link_to t('navbar.project'), '#' %></li>
-            <li><%= link_to t('navbar.questions'), '#' %></li>
+            <li><%= link_to t('navbar.association'), solim_path(I18n.locale) %></li>
+            <li><%= link_to t('navbar.project'), project_path(I18n.locale) %></li>
+            <li><%= link_to t('navbar.questions'), questions_path(I18n.locale) %></li>
           </ul>
         </div>
       </div>

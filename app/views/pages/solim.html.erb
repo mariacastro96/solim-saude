@@ -11,7 +11,7 @@
     <div class="solim__tab-body">
       <% Current.language.statements.where(code: 'solim').each_with_index do |statement, index| %>
         <div class="solim__tab-content <%= '--body-active' if index == 0 %>" data-tab-active="tab-<%= index + 1 %>">
-          <p><%= statement.text %></p>
+          <p id="debug" contenteditable="true"><%= statement.text %></p>
         </div>
       <% end %>
     </div>

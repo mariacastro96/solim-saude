@@ -35,7 +35,7 @@ en:
     relevant_links: 'Relevant Links'
     follow: 'Follow'
   navbar:
-    organization: 'Organization'
+    association: 'Association'
     project: 'Project'
     questions: 'Questions'
   project:

@@ -165,7 +165,7 @@ puts "5. Creating Topics"
 QuestionTopic.create!([
   {
     code: 'T1',
-    name: 'Tópico 1',
+    name: 'Acordos com países',
     language: Language.find_by(code: 'PT'),
   },
   {
@@ -175,7 +175,7 @@ QuestionTopic.create!([
   },
   {
     code: 'T2',
-    name: 'Tópico 2',
+    name: 'Sem acordo',
     language: Language.find_by(code: 'PT')
   },
   {
@@ -185,7 +185,7 @@ QuestionTopic.create!([
   },
   {
     code: 'T3',
-    name: 'Tópico 3',
+    name: 'Preços',
     language: Language.find_by(code: 'PT')
   },
   {
@@ -195,7 +195,7 @@ QuestionTopic.create!([
   },
   {
     code: 'T4',
-    name: 'Tópico 4',
+    name: 'Outras infos',
     language: Language.find_by(code: 'PT')
   },
   {
@@ -213,7 +213,7 @@ puts "6. Creating Questions"
 Question.create!([
   {
     code: 'Q1',
-    question: 'Pergunta 1',
+    question: 'Sou nacional de Andorra?',
     answer: LoremIpsum.random(paragraphs: 1),
     question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T1')
   },
@@ -225,37 +225,85 @@ Question.create!([
   },
   {
     code: 'Q2',
-    question: 'Pergunta 2',
+    question: 'Sou nacional de Angola?',
     answer: LoremIpsum.random(paragraphs: 1),
-    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T2')
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T1')
   },
   {
     code: 'Q2',
     question: 'Question 2',
     answer: LoremIpsum.random(paragraphs: 1),
-    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T2')
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T1')
   },
   {
     code: 'Q3',
-    question: 'Pergunta 3',
+    question: 'Sou nacional do Brasil?',
     answer: LoremIpsum.random(paragraphs: 1),
-    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T3')
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T1')
   },
   {
     code: 'Q3',
     question: 'Question 3',
     answer: LoremIpsum.random(paragraphs: 1),
-    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T3')
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T1')
   },
   {
     code: 'Q4',
-    question: 'Pergunta 4',
+    question: 'Estou em Portugal há mais de 90 dias?',
     answer: LoremIpsum.random(paragraphs: 1),
-    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T4')
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T2')
   },
   {
     code: 'Q4',
     question: 'Question 4',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T2')
+  },
+  {
+    code: 'Q5',
+    question: 'Que documentos tenho de apresentar para me inscrever no CS?',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T2')
+  },
+  {
+    code: 'Q5',
+    question: 'Question 5',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T2')
+  },
+  {
+    code: 'Q6',
+    question: 'Pergunta 6',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T3')
+  },
+  {
+    code: 'Q6',
+    question: 'Question 6',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T3')
+  },
+  {
+    code: 'Q7',
+    question: 'Vacinação',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T4')
+  },
+  {
+    code: 'Q7',
+    question: 'Question 7',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T4')
+  },
+  {
+    code: 'Q8',
+    question: 'Urgências',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T4')
+  },
+  {
+    code: 'Q8',
+    question: 'Question 8',
     answer: LoremIpsum.random(paragraphs: 1),
     question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T4')
   },
