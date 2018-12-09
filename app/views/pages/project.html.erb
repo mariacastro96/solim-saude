@@ -13,344 +13,72 @@
       <div class="project__tab-content --body-active" data-tab-active="tab-1">
         <p><%= Current.language.statements.find_by(code: 'projeto').text %></p>
       </div>
-        <div class="project__tab-content" data-tab-active="tab-2">
-          <div class="row">
-  <div class="col-sm-12 col-md-6 col-lg-4">
-    <canvas id="genero" style="width: 80% !important; height: 80% !important;"></canvas>
-  </div>
-  <div class="col-sm-12 col-md-6 col-lg-4">
-    <canvas id="residentes" style="width: 80% !important; height: 80% !important;"></canvas>
-  </div>
-  <div class="col-sm-12 col-md-6 col-lg-4">
-    <canvas id="medico" style="width: 80% !important; height: 80% !important;"></canvas>
-  </div>
-  <div class="col-sm-12 col-md-6 col-lg-4">
-    <canvas id="snsPrivado" style="width: 80% !important; height: 80% !important;"></canvas>
-  </div>
-  <div class="col-sm-12 col-md-6 col-lg-4">
-    <canvas id="nSNS" style="width: 80% !important; height: 80% !important;"></canvas>
-  </div>
-  <div class="col-sm-12 col-md-6 col-lg-4">
-    <canvas id="Dific" style="width: 80% !important; height: 80% !important;"></canvas>
-  </div>
-</div>
-<script>
-var ctx = document.getElementById("genero").getContext('2d');
-var genero = new Chart(ctx,{
-  type:'pie',
-  data: {
-    labels:['Homem', 'Mulher', 'N/A'],
-    datasets:[{
-      label:'Population',
-      data:[
-        217,
-        80,
-        3
-      ],
-      // backgroundColor:'green'
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)'
-      ],
-      borderWidth:1,
-      borderColor:'#777',
-      hoverBorderWidth:3,
-      hoverBorderColor: 'black'
-    }]
-  },
-  options: {
-    title:{
-      display:true,
-      text:'Genero',
-      fontSize: 25
-    },
-    legend: {
-      display: true,
-      position: 'right',
-      labels:{
-        fontColor:'#000'
-      }
-    },
-    layout:{
-      padding:{
-        left:50,
-        right:0,
-        bottom:0,
-        top:0
-      }
-    },
-    tooltips:{
-      enabled: false
-    }
-  }
-});
-</script>
-
-<script>
-var ctx = document.getElementById("residentes").getContext('2d');
-var residentes = new Chart(ctx,{
-  type:'pie',
-  data: {
-    labels:['Sim', 'Não', 'N/A'],
-    datasets:[{
-      label:'Autorização de residência',
-      data:[
-        28,
-        271,
-        1
-      ],
-      // backgroundColor:'green'
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)'
-      ],
-      borderWidth:1,
-      borderColor:'#777',
-      hoverBorderWidth:3,
-      hoverBorderColor: 'black'
-    }]
-  },
-  options: {
-    title:{
-      display:true,
-      text:'Autorização de residência',
-      fontSize: 25
-    },
-    legend: {
-      display: true,
-      position: 'right',
-      labels:{
-        fontColor:'#000'
-      }
-    },
-    layout:{
-      padding:{
-        left:50,
-        right:0,
-        bottom:0,
-        top:0
-      }
-    },
-    tooltips:{
-      enabled: false
-    }
-  }
-});
-</script>
-
-<script>
-var ctx = document.getElementById("medico").getContext('2d');
-var medico = new Chart(ctx,{
-  type:'pie',
-  data: {
-    labels:['Sim', 'Não'],
-    datasets:[{
-      label:'Recorreu ao médico',
-      data:[
-        233,
-        67
-      ],
-      // backgroundColor:'green'
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-      ],
-      borderWidth:1,
-      borderColor:'#777',
-      hoverBorderWidth:3,
-      hoverBorderColor: 'black'
-    }]
-  },
-  options: {
-    title:{
-      display:true,
-      text:'Recorreu ao médico',
-      fontSize: 25
-    },
-    legend: {
-      display: true,
-      position: 'right',
-      labels:{
-        fontColor:'#000'
-      }
-    },
-    layout:{
-      padding:{
-        left:50,
-        right:0,
-        bottom:0,
-        top:0
-      }
-    },
-    tooltips:{
-      enabled: false
-    }
-  }
-});
-</script>
-
-<script>
-var ctx = document.getElementById("snsPrivado").getContext('2d');
-var snsPrivado = new Chart(ctx,{
-  type:'pie',
-  data: {
-    labels:['Centro de Saúde', 'Hospital', 'Ambos', 'N/A'],
-    datasets:[{
-      label:'Centro de Saúde ou Hospital',
-      data:[
-        123,
-        26,
-        65,
-        6
-      ],
-      // backgroundColor:'green'
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(55, 99, 32, 0.2)',
-        'rgba(25, 9, 1, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-      ],
-      borderWidth:1,
-      borderColor:'#777',
-      hoverBorderWidth:3,
-      hoverBorderColor: 'black'
-    }]
-  },
-  options: {
-    title:{
-      display:true,
-      text:'Centro de Saúde ou Hospital',
-      fontSize: 25
-    },
-    legend: {
-      display: true,
-      position: 'right',
-      labels:{
-        fontColor:'#000'
-      }
-    },
-    layout:{
-      padding:{
-        left:50,
-        right:0,
-        bottom:0,
-        top:0
-      }
-    },
-    tooltips:{
-      enabled: false
-    }
-  }
-});
-</script>
-
-<script>
-var ctx = document.getElementById("nSNS").getContext('2d');
-var nSNS = new Chart(ctx,{
-  type:'pie',
-  data: {
-    labels:['Sim', 'Não', 'N/A'],
-    datasets:[{
-      label:'Numero de SNS',
-      data:[
-        84,
-        147,
-        2      ],
-      // backgroundColor:'green'
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(2, 39, 199, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-      ],
-      borderWidth:1,
-      borderColor:'#777',
-      hoverBorderWidth:3,
-      hoverBorderColor: 'black'
-    }]
-  },
-  options: {
-    title:{
-      display:true,
-      text:'Numero de SNS',
-      fontSize: 25
-    },
-    legend: {
-      display: true,
-      position: 'right',
-      labels:{
-        fontColor:'#000'
-      }
-    },
-    layout:{
-      padding:{
-        left:50,
-        right:0,
-        bottom:0,
-        top:0
-      }
-    },
-    tooltips:{
-      enabled: false
-    }
-  }
-});
-</script>
-
-<script>
-var ctx = document.getElementById("Dific").getContext('2d');
-var Dific = new Chart(ctx,{
-  type:'pie',
-  data: {
-    labels:['Sim', 'Não', 'N/A'],
-    datasets:[{
-      label:'Dificuldade',
-      data:[
-        93,
-        131,
-        9      ],
-      // backgroundColor:'green'
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(2, 39, 199, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-      ],
-      borderWidth:1,
-      borderColor:'#777',
-      hoverBorderWidth:3,
-      hoverBorderColor: 'black'
-    }]
-  },
-  options: {
-    title:{
-      display:true,
-      text:'Dificuldade',
-      fontSize: 25
-    },
-    legend: {
-      display: true,
-      position: 'right',
-      labels:{
-        fontColor:'#000'
-      }
-    },
-    layout:{
-      padding:{
-        left:50,
-        right:0,
-        bottom:0,
-        top:0
-      }
-    },
-    tooltips:{
-      enabled: false
-    }
-  }
-});
-</script>
-
+      <div class="project__tab-content" data-tab-active="tab-2">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <canvas id="genero"></canvas>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+<script>
+  var ctx = document.getElementById("genero").getContext('2d');
+  var genero = new Chart(ctx,{
+    type:'pie',
+    data: {
+      labels:['Homem', 'Mulher', 'N/A'],
+      datasets:[{
+        label:'Population',
+        data:[
+        217,
+        80,
+        3
+        ],
+        // backgroundColor:'green'
+        backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)'
+        ],
+        borderWidth:1,
+        borderColor:'#777',
+        hoverBorderWidth:3,
+        hoverBorderColor: 'black'
+      }]
+    },
+    options: {
+      title:{
+        display:true,
+        text:'Genero',
+        fontSize: 25
+      },
+      legend: {
+        display: true,
+        position: 'right',
+        labels:{
+          fontColor:'#000'
+        }
+      },
+      layout:{
+        padding:{
+          left:50,
+          right:0,
+          bottom:0,
+          top:0
+        }
+      },
+      tooltips:{
+        enabled: false
+      }
+    }
+  });
+</script>
