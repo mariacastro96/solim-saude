@@ -4,5 +4,11 @@ Rails.application.routes.draw do
     get 'solim', to: 'pages#solim'
     get 'project', to: 'pages#project'
     get 'questions', to: 'pages#questions'
-   end
+
+    resources :study_fields, only: :index do
+      member do
+        get 'results'
+      end
+    end
+  end
 end
