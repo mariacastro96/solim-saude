@@ -15,7 +15,6 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
-
 gem 'lorem_ipsum_amet', '~> 0.6.2'
 
 group :development do
@@ -23,6 +22,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'rails-erd', require: false
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'

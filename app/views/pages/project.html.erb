@@ -15,70 +15,46 @@
       </div>
       <div class="project__tab-content" data-tab-active="tab-2">
         <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <canvas id="genero"></canvas>
-          </div>
+          <% @study_fields.each do |study_field| %>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="graph" style="border: 1px solid gray; padding: 10px;">
+                <p style="text-align: center"><%= study_field.title %></p>
+                <canvas id="<%= study_field.title %>" data-title="<%= study_field.title %>"></canvas>
+              </div>
+              <script>
+                var title = <%= study_field.title.inspect.html_safe %>;
+                var ctx = document.getElementById(title);
+                var variables = <%= study_field.study_variables.map(&:value).inspect.html_safe %>;
+                var colors = <%= study_field.study_variables.map(&:color).inspect.html_safe %>;
+                var labels = <%= study_field.study_variables.map(&:name).inspect.html_safe %>;
+                var data = {
+                    datasets: [{
+                        data: variables,
+                        backgroundColor: colors,
+                        borderWidth: 0,
+                        hoverBackgroundColor: '#C3DCBD'
+                    }],
+                    labels: labels
+                };
+                var options = {
+                  legend: {
+                    position: 'bottom',
+                  },
+                  animation: {
+                    animateRotate: true,
+                    animateScale: true
+                  },
+                }
+                var chart = new Chart(ctx, {
+                  type: 'doughnut',
+                  data: data,
+                  options: options
+                });
+              </script>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-<script>
-  var ctx = document.getElementById("genero").getContext('2d');
-  var genero = new Chart(ctx,{
-    type:'pie',
-    data: {
-      labels:['Homem', 'Mulher', 'N/A'],
-      datasets:[{
-        label:'Population',
-        data:[
-        217,
-        80,
-        3
-        ],
-        // backgroundColor:'green'
-        backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)'
-        ],
-        borderWidth:1,
-        borderColor:'#777',
-        hoverBorderWidth:3,
-        hoverBorderColor: 'black'
-      }]
-    },
-    options: {
-      title:{
-        display:true,
-        text:'Genero',
-        fontSize: 25
-      },
-      legend: {
-        display: true,
-        position: 'right',
-        labels:{
-          fontColor:'#000'
-        }
-      },
-      layout:{
-        padding:{
-          left:50,
-          right:0,
-          bottom:0,
-          top:0
-        }
-      },
-      tooltips:{
-        enabled: false
-      }
-    }
-  });
-</script>
