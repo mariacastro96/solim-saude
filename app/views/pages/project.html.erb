@@ -10,8 +10,8 @@
     </div>
     <div class="project__tab-division" data-tab-division="tab-1"></div>
     <div class="project__tab-body">
-      <div class="project__tab-content --body-active" data-tab-active="tab-1">
-        <p><%= Current.language.statements.find_by(code: 'projeto').text %></p>
+      <div class="project__tab-content --body-active" data-tab-active="tab-1" style="text-align: justify">
+        <p><%= sanitize Current.language.statements.find_by(code: 'projeto').text %></p>
       </div>
       <div class="project__tab-content" data-tab-active="tab-2">
         <div class="row">
