@@ -10,8 +10,8 @@
     <div class="solim__tab-division" data-tab-division="tab-1"></div>
     <div class="solim__tab-body">
       <% Current.language.statements.where(code: 'solim').each_with_index do |statement, index| %>
-        <div class="solim__tab-content <%= '--body-active' if index == 0 %>" data-tab-active="tab-<%= index + 1 %>">
-          <p id="debug" contenteditable="true"><%= statement.text %></p>
+        <div class="solim__tab-content <%= '--body-active' if index == 0 %>" data-tab-active="tab-<%= index + 1 %>" style="text-align: justify">
+          <p><%= sanitize statement.text %></p>
         </div>
       <% end %>
     </div>

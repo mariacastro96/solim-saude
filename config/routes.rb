@@ -5,10 +5,13 @@ Rails.application.routes.draw do
     get 'project', to: 'pages#project'
     get 'questions', to: 'pages#questions'
 
+
     resources :study_fields, only: :index do
       member do
         get 'results'
       end
     end
+
   end
+  resources :statements, only: [:edit, :update]
 end
