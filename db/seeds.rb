@@ -122,31 +122,141 @@ Statement.create!([
   {
     code: 'solim',
     title: 'Quem somos?',
-    text: "Solidariedade Imigrante é uma associação pela defesa dos direitos dos imigrantes em Portugal, de âmbito nacional e sem fins lucrativos, criada em 2001.Queremos dar a palavra aos imigrantes, uma palavra autônoma e independente, para que sejamos os verdadeiros protagonistas na defesa dos nossos interesses.Queremos que todos possam exercer os seus direitos, independentemente do pais de origem, da religião, da etnia e do sexo, através da luta por direitos iguais.Pertencemos à varias redes de associações nacionais e internacionais, nomeadamente a Plataforma de Associações de Imigrantes, a Rede de Combate a Exclusão Social e Pobreza, a Plataforma artigo 65 – Habitação para tod@s, a Rede No-Vox; somos ainda um dos promotores do Forum Social Português.Lutamos diariamente pela autonomia financeira. Aqueles que ajudamos também ajudam a associação, associando-se e pagando as suas quotas, numa atitude de responsabilização e na criação de um sentimento de pertence.",
+    text: "<p>Solidariedade Imigrante é uma associação pela defesa dos direitos dos imigrantes em Portugal, de âmbito nacional e sem fins lucrativos, criada em 2001.</p>
+<br/>
+<p>Queremos dar a palavra aos imigrantes, uma palavra autônoma e independente, para que sejamos os verdadeiros protagonistas na defesa dos nossos interesses.</p>
+<br/>
+<p>Queremos que todos possam exercer os seus direitos, independentemente do pais de origem, da religião, da etnia e do sexo, através da luta por direitos iguais.</p>
+<br/>
+<p>Pertencemos à varias redes de associações nacionais e internacionais, nomeadamente a Plataforma de Associações de Imigrantes, a Rede de Combate a Exclusão Social e Pobreza, a Plataforma artigo 65 – Habitação para tod@s, a Rede No-Vox; somos ainda um dos promotores do Forum Social Português.</p>
+<br/>
+<p>Lutamos diariamente pela autonomia financeira. </p>
+<br/>
+<p>Aqueles que ajudamos também ajudam a associação, associando-se e pagando as suas quotas, numa atitude de responsabilização e na criação de um sentimento de pertence.</p>
+",
     language: Language.find_by(code: 'PT')
   },
   {
     code: 'solim',
     title: 'Who we are',
-    text: 'Solidariedade Imigrante is a national, not-for-profit organisation, set up in 2001 in order to defend the rights of immigrants in Portugal.We claim an independent voice, so we may fully take part in the struggle for the defense of our common rights and interests.We want everyone to be in a position to exercise their rights as citizens, without regard to country of origin, religion, race or gender.We belong to various national and international organisation networks: Plataforma de Associações de Imigrantes, Rede de Combate a Exclusão Social e Pobreza, a Plataforma artigo 65 – Habitação para tod@s and the No-Vox network. We are also part of the Portuguese social forum.We are a resistance and pressure group. We believe in solidarity between Portuguese and foreign citizens, in order to defend interests that are common to all workers.Our organisation counts thousands of members, from over 80 different countries. Every day, we keep up the fight for our financial autonomy.Those who help us, help the organisation, through their membership and monthly contribution, in a spirit of dependability, in a shared struggle.',
+    text: '<p>Solidariedade Imigrante is a national, not-for-profit organisation, set up in 2001 in order to defend the rights of immigrants in Portugal.</p>
+<br/>
+<p>We claim an independent voice, so we may fully take part in the struggle for the defense of our common rights and interests.</p>
+<br/>
+<p>We want everyone to be in a position to exercise their rights as citizens, without regard to country of origin, religion, race or gender.</p>
+<br/>
+<p>We belong to various national and international organisation networks: Plataforma de Associações de Imigrantes, Rede de Combate a Exclusão Social e Pobreza, a Plataforma artigo 65 – Habitação para tod@s and the No-Vox network. We are also part of the Portuguese social forum.We are a resistance and pressure group. </p>
+<br/>
+<p>We believe in solidarity between Portuguese and foreign citizens, in order to defend interests that are common to all workers.</p>
+<br/>
+<p>Our organisation counts thousands of members, from over 80 different countries.</p>
+<br/>
+<p> Every day, we keep up the fight for our financial autonomy.Those who help us, help the organisation, through their membership and monthly contribution, in a spirit of dependability, in a shared struggle.</p>',
     language: Language.find_by(code: 'ENG')
   },
   {
     code: 'solim',
     title: 'O que fazemos?',
-    text: 'Damos informações sobre direitos e deveres dos cidadãos estrangeiros e apoiamos nas seguintes situações:A regularização (autorização de residência e de permanência, visto de estudo…)O reagrupamento familiarO asilo politico.O direito à educação, à saude, à habitação, à segurança social e ao trabalho.Apoiamos e acompanhamos os trabalhadores na resolução dos conflictos laborais.Prestamos apoio em situações relacionadas com prisões, tribunais e zona internacional do aeroporto de Lisboa.Temos uma parceria com o Instituto de Emprego e Formação Profissional (UNIVA) para orientação e acompanhamento na procura de emprego e na formação profissional.Organizamos cursos de português, inglês, russo, arabe, crioulo e informatica.Organizamos Workshops de dança, percussão, video e outras areas artisticas.Organizamos encontros interculturais e concertos, no âmbito da defesa dos direitos humanos, com o objectivo de permitir o conhecimento de culturas diferentes e um debate de ideias e experiências.Organizamos e participamos em debates e exposições sobre a luta dos imigrantes em Portugal, em colaboração com universidades, escolas e outros organismos.Propomos-nos em organizar muitas outras actividades, nos bairros, nos locais de trabalho e na rua, contando com a tua participação.Temos um bar aberto e organizamos jantares à volta de gastronomia do mundo, debates, filmes e musica de vários países, para promover a confraternização e a vivência intercultural.Par alem das actividades que desenvolvemos com todas as comunidades imigrantes, a nossa associação, pela dinâmica exercida, criou outras áreas de trabalho, nomeadamente o Jornal da SOLIM, o grupo Juventude e mobilidade, o grupo Direito à Habitação, o grupo Mulheres Imigrantes.',
+    text: '<p>Damos informações sobre direitos e deveres dos cidadãos estrangeiros e apoiamos nas seguintes situações:</p>
+<ul>
+<li>A regularização (autorização de residência e de permanência, visto de estudo…)</li>
+<li>O reagrupamento familiar</li>
+<li>O asilo politico.</li>
+<li>O direito à educação, à saude, à habitação, à segurança social e ao trabalho.</li>
+</ul>
+<p>Apoiamos e acompanhamos os trabalhadores na resolução dos conflictos laborais.</p>
+<br/>
+<p>Prestamos apoio em situações relacionadas com prisões, tribunais e zona internacional do aeroporto de Lisboa.</p>
+<br/>
+<p>Temos uma parceria com o Instituto de Emprego e Formação Profissional (UNIVA) para orientação e acompanhamento na procura de emprego e na formação profissional.</p>
+<br/>
+<p>Organizamos cursos de português, inglês, russo, arabe, crioulo e informatica.Organizamos Workshops de dança, percussão, video e outras areas artisticas.</p>
+<br/>
+<p>Organizamos encontros interculturais e concertos, no âmbito da defesa dos direitos humanos, com o objectivo de permitir o conhecimento de culturas diferentes e um debate de ideias e experiências.</p>
+<br/>
+<p>Organizamos e participamos em debates e exposições sobre a luta dos imigrantes em Portugal, em colaboração com universidades, escolas e outros organismos.</p>
+<br/>
+<p>Propomos-nos em organizar muitas outras actividades, nos bairros, nos locais de trabalho e na rua, contando com a tua participação.</p>
+<br/>
+<p>Temos um bar aberto e organizamos jantares à volta de gastronomia do mundo, debates, filmes e musica de vários países, para promover a confraternização e a vivência intercultural.</p>
+<br/>
+<p>Par alem das actividades que desenvolvemos com todas as comunidades imigrantes, a nossa associação, pela dinâmica exercida, criou outras áreas de trabalho, nomeadamente o Jornal da SOLIM, o grupo Juventude e mobilidade, o grupo Direito à Habitação, o grupo Mulheres Imigrantes.</p>',
     language: Language.find_by(code: 'PT')
   },
   {
     code: 'solim',
     title: 'What we do',
-    text: 'we give information and support about rights and dutys of the foreigner citizens concerning regulations (residence permit), family reunification, political asylum and rights of education, health, living space plus social and working insurance.we help and accompany workers in the resolution of their problems at work.we offer help in situations concerning to prison, court and the international zone of the Lisbon airport.we have a partnership with the Institue of work and professional education (UNIVA) to support and accompany immigrants with the search of jobs and education.we organize language courses (portugues, english, russian, crioulu snd arabain) and computer courses.we organize dance, percussion, video and other artistic workshops.we organize intercultural get togethers and concerts in order to defense the human rights with the aim to give access to different cultures and to debate ideas and experiences.we organize and participate in debates an expositions about the the fight of the immigrants in Portugal in cooperation with universities, schools and other organizations.we intend to organize even more activities in the neighbourhoods, the working space and in the streets provided your participation.we organize dinners with cuisine all around the world, accompanied with debates, filmes and music from the correlative countries to promote the intercultural confrontation and the live together.Besides the mentioned activities that envolve all kind of immigrant communities, our association also criated more working areas, for example the magazine SOLIM, the group of youth and mobility, the group for the right of living space and the group of immigrant women.',
+    text: '<p>We give information and support about rights and duties of the foreigner citizens concerning regulations (residence permit), family reunification, political asylum and rights of education, health, living space plus social and working insurance.</p>
+<br/>
+<p>we help and accompany workers in the resolution of their problems at work.</p>
+<br/>
+<p>we offer help in situations concerning to prison, court and the international zone of the Lisbon airport.</p>
+<br/>
+<p>we have a partnership with the Institue of work and professional education (UNIVA) to support and accompany immigrants with the search of jobs and education.</p>
+<br/>
+<p>we organize language courses (Portuguese, English, Russian, courd and Arabian) and computer courses.</p>
+<br/>
+<p>we organize dance, percussion, video and other artistic workshops.</p>
+<br/>
+<p>we organize intercultural get-togethers and concerts in order to defend the human rights with the aim to give access to different cultures and to debate ideas and experiences.</p>
+<br/>
+<p>we organize and participate in debates and expositions about the fight of the immigrants in Portugal in cooperation with universities, schools and other organizations.</p>
+<br/>
+<p>we intend to organize even more activities in the neighborhoods, the working space and in the streets provided your participation.</p>
+<br/>
+<p>we organize dinners with cuisine from all around the world, accompanied by debates, films, and music from the correlative countries to promote the intercultural confrontation and life together. </p>
+<br/>
+<p>Besides the mentioned activities that involve all kind of immigrant communities, our association also created more working areas, for example, the magazine SOLIM, the group of youth and mobility, the group for the right of living space and the group of immigrant women.</p>',
     language: Language.find_by(code: 'ENG')
   },
   {
     code: 'projeto',
     title: 'Projeto - Saúde',
-    text: LoremIpsum.random(paragraphs: 4),
+    text: '<p>O projeto <b>SAUDE SEM BARREIRAS</b> foi desenvolvido pela <b>Associação Solidariedade Imigrante</b>
+ao longo de 2018 e contribuiu para os objetivos gerais da associação:</p>
+<br/>
+<ul>
+<li>Promoção dos direitos dos imigrantes,</li>
+<li> Promoção da igualdade de oportunidades</li>
+<li>Combate e denúncia de situações de discriminação</li>
+</ul>
+<br/>
+<p>Com um enfoque específico nas questões da saúde o projeto visou promover a integração
+multinível dos imigrantes, quer de pessoas recém-chegadas, quer de pessoas com mais tempo
+de permanência em Portugal e apoiar estes cidadãos na sua integração na sociedade de
+acolhimento, dotando-os de conhecimento e informação útil à sua integração.</p>
+<br/>
+<p>No âmbito do projeto foram desenvolvidas 3 atividades, complementares entre si:</p>
+<br/>
+<ol>
+<li> <b>Atendimento individualizado a cidadãos imigrantes</b>
+<br/>
+<br/>
+Com uma abordagem ajustada a cada caso o atendimento inseriu-se e complementou o
+atendimento geral da associação, introduzindo uma mais-valia na prestação de informação
+sobre acesso à saúde e um acompanhamento próximo de casos onde o acesso à saúde se
+encontra obstaculizado. </li>
+<br/>
+<li><b> Produção de um vídeo informativo e site</b>
+<br/>
+<br/>
+Construído pelos próprios imigrantes, o vídeo identifica alguns dos problemas com que os
+cidadãos estrangeiros se deparam no contacto com os serviços de saúde e disponibiliza
+informação relevante neste domínio. O vídeo foi alojado neste site onde se disponibiliza
+informação complementar. </li>
+<br/>
+<li> <b>Inquérito e peça de teatro forum</b>
+<br/>
+<br/>
+Esta atividade consistiu na aplicação de questionários a imigrantes que recorreram ao
+atendimento da Solidariedade Imigrante com vista ao levantamento das condicionantes que se
+verificam, na prática, no acesso à saúde. Os resultados deste levantamento podem ser
+consultados aqui e deram corpo a uma peça de teatro forum sobre acesso à saúde, em
+parceria com o Grupo de Teatro do Oprimido de Lisboa (GTO).</li>
+</ol>
+<br/>
+O projeto contou com o contributo de voluntários/as e com o apoio financeiro do Alto
+Comissariado para as Migrações. <a href="https://www.google.com">google</a>',
     language: Language.find_by(code: 'PT')
   },
   {
