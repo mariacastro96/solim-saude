@@ -16,42 +16,43 @@
       <div class="project__tab-content" data-tab-active="tab-2">
         <div class="row">
           <% @study_fields.each do |study_field| %>
-            <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="col-xs-6">
+              <p style="text-align: center"><%= study_field.title %></p>
+            </div>
+            <div class="col-xs-6">
               <div class="graph" style="border: 1px solid gray; padding: 10px;">
-                <p style="text-align: center"><%= study_field.title %></p>
                 <canvas id="<%= study_field.title %>" data-title="<%= study_field.title %>"></canvas>
               </div>
-              <script>
-                var title = <%= study_field.title.inspect.html_safe %>;
-                var ctx = document.getElementById(title);
-                var variables = <%= study_field.study_variables.map(&:value).inspect.html_safe %>;
-                var colors = <%= study_field.study_variables.map(&:color).inspect.html_safe %>;
-                var labels = <%= study_field.study_variables.map(&:name).inspect.html_safe %>;
-                var data = {
-                    datasets: [{
-                        data: variables,
-                        backgroundColor: colors,
-                        borderWidth: 0,
-                        hoverBackgroundColor: '#C3DCBD'
-                    }],
-                    labels: labels
-                };
-                var options = {
-                  legend: {
-                    position: 'bottom',
-                  },
-                  animation: {
-                    animateRotate: true,
-                    animateScale: true
-                  },
-                }
-                var chart = new Chart(ctx, {
-                  type: 'doughnut',
-                  data: data,
-                  options: options
-                });
-              </script>
             </div>
+            <script>
+              var title = <%= study_field.title.inspect.html_safe %>;
+              var ctx = document.getElementById(title);
+              var variables = <%= study_field.study_variables.map(&:value).inspect.html_safe %>;
+              var colors = <%= study_field.study_variables.map(&:color).inspect.html_safe %>;
+              var labels = <%= study_field.study_variables.map(&:name).inspect.html_safe %>;
+              var data = {
+                  datasets: [{
+                      data: variables,
+                      backgroundColor: colors,
+                      borderWidth: 0,
+                      hoverBackgroundColor: '#C3DCBD'
+                  }],
+                  labels: labels
+              };
+              var options = {
+                responsive: true,
+                legend: {
+                  position: 'bottom',
+                  display: false,
+                },
+
+              }
+              var chart = new Chart(ctx, {
+                type: 'doughnut',
+                data: data,
+                options: options
+              });
+            </script>
           <% end %>
         </div>
       </div>
