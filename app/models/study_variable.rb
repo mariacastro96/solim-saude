@@ -23,6 +23,6 @@ class StudyVariable < ApplicationRecord
   private
 
   def init
-    self.percentage ||= value/study_field.total_value
+    self.percentage ||= (value/study_field.total_value).round(2) * 100
   end
 end

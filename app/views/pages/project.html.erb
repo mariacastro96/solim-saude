@@ -20,12 +20,12 @@
               <p style="text-align: center; font-size: 1em "><%= study_field.title %></p>
               <p style="text-align: center; font-size: 0.7em"><%= study_field.subtitle %></p>
               <div style="display: flex; justify-content: space-around; font-size: 0.8em; margin: 5px 0;">
-                <% study_field.study_variables.each do |variable| %>
-                  <div>
-                    <i class="fas fa-circle" style="color: <%= variable.color %>"></i>
-                    <span style="text-align: center"><%= variable.name %></span>
-                  </div>
-                <% end %>
+                <%# study_field.study_variables.each do |variable| %>
+                  <!-- <div>
+                    <i class="fas fa-circle" style="color: <%#= variable.color %>"></i>
+                    <span style="text-align: center"><%#= variable.name %></span>
+                  </div> -->
+                <%# end %>
               </div>
               <div class="graph" style="background: white; margin: 10px 0; padding: 30px; border-radius: 4px;">
                 <canvas id="<%= study_field.title %>" data-title="<%= study_field.title %>"></canvas>
