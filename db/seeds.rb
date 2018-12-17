@@ -447,44 +447,142 @@ puts "8. Creating Study fields"
 StudyField.create!([
   {
     code: 'SF1',
-    title: 'Campo de Estudo 1',
-    subtitle: 'Breve explicação',
-    total_value: 100,
+    title: 'Género',
+    subtitle: 'Género das pessoas entrevistadas',
+    total_value: 300,
     study: Language.find_by(code: 'PT').studies.find_by(code: 'S1')
   },
   {
     code: 'SF1',
     title: 'Study Field 1',
     subtitle: 'Brief explanation',
-    total_value: 100,
+    total_value: 300,
     study: Language.find_by(code: 'ENG').studies.find_by(code: 'S1')
   },
   {
     code: 'SF2',
-    title: 'Campo de Estudo 2',
-    subtitle: 'Breve explicação',
-    total_value: 100,
+    title: 'Nacionalidade',
+    subtitle: 'Nacionalidade das pessoas selecionadas',
+    total_value: 300,
     study: Language.find_by(code: 'PT').studies.find_by(code: 'S1')
   },
   {
     code: 'SF2',
     title: 'Study Field 2',
     subtitle: 'Brief explanation',
-    total_value: 100,
+    total_value: 300,
     study: Language.find_by(code: 'ENG').studies.find_by(code: 'S1')
   },
   {
     code: 'SF3',
-    title: 'Campo de Estudo 3',
-    subtitle: 'Breve explicação',
-    total_value: 100,
+    title: 'Ano de chegada a Portugal',
+    subtitle: 'Ano de chegada a Portugal das pessoas entrevistadas',
+    total_value: 300,
     study: Language.find_by(code: 'PT').studies.find_by(code: 'S1')
   },
   {
     code: 'SF3',
     title: 'Study Field 3',
     subtitle: 'Brief explanation',
-    total_value: 100,
+    total_value: 300,
+    study: Language.find_by(code: 'ENG').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF4',
+    title: 'Autorização de residência',
+    subtitle: 'Se os entrevistados têm ou não autorização de residência',
+    total_value: 300,
+    study: Language.find_by(code: 'PT').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF4',
+    title: 'Study Field 4',
+    subtitle: 'Brief explanation',
+    total_value: 300,
+    study: Language.find_by(code: 'ENG').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF5',
+    title: 'Recorreu ao médico?',
+    subtitle: 'Se os entrevistados recorreram ao médico, em Portugal',
+    total_value: 300,
+    study: Language.find_by(code: 'PT').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF5',
+    title: 'Study Field 5',
+    subtitle: 'Brief explanation',
+    total_value: 300,
+    study: Language.find_by(code: 'ENG').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF6',
+    title: 'SNS ou privado?',
+    subtitle: 'Dos imigrantes que recorreram ao médico, que tipo se serviço procuraram',
+    total_value: 233,
+    study: Language.find_by(code: 'PT').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF6',
+    title: 'Study Field 6',
+    subtitle: 'Brief explanation',
+    total_value: 233,
+    study: Language.find_by(code: 'ENG').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF7',
+    title: 'Centro de Saúde ou hospital?',
+    subtitle: 'Para os entrevistados que recorreram ao público, a que tipo recorreram?',
+    total_value: 220,
+    study: Language.find_by(code: 'PT').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF7',
+    title: 'Study Field 7',
+    subtitle: 'Brief explanation',
+    total_value: 220,
+    study: Language.find_by(code: 'ENG').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF8',
+    title: 'Número de SNS',
+    subtitle: 'Dos imigrantes que recorreram ao médico, se têm numero de SNS',
+    total_value: 233,
+    study: Language.find_by(code: 'PT').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF8',
+    title: 'Study Field 8',
+    subtitle: 'Brief explanation',
+    total_value: 233,
+    study: Language.find_by(code: 'ENG').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF9',
+    title: 'Dificuldade',
+    subtitle: 'Dos imigrantes que recorreram ao médico, se tiveram dificuldade',
+    total_value: 233,
+    study: Language.find_by(code: 'PT').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF9',
+    title: 'Study Field 9',
+    subtitle: 'Brief explanation',
+    total_value: 233,
+    study: Language.find_by(code: 'ENG').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF10',
+    title: 'Tipo de dificuldade',
+    subtitle: 'Dos que tiveram dificuldade, de que tipo',
+    total_value: 124,
+    study: Language.find_by(code: 'PT').studies.find_by(code: 'S1')
+  },
+  {
+    code: 'SF10',
+    title: 'Study Field 10',
+    subtitle: 'Brief explanation',
+    total_value: 124,
     study: Language.find_by(code: 'ENG').studies.find_by(code: 'S1')
   },
 ])
@@ -497,88 +595,537 @@ puts "9. Creating Variables"
 StudyVariable.create!([
   {
     code: 'V1',
-    name: 'Variavel 1',
-    value: 20,
+    name: 'Homem',
+    value: 217,
     color: '#24890D',
     study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF1')
   },
   {
     code: 'V1',
     name: 'Variable 1',
-    value: 20,
+    value: 217,
     color: '#24890D',
     study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF1')
   },
   {
     code: 'V2',
-    name: 'Variavel 2',
+    name: 'Mulher',
     value: 80,
-    color: '#91C487',
+    color: '#58A249',
     study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF1')
   },
   {
     code: 'V2',
     name: 'Variable 2',
     value: 80,
-    color: '#91C487',
+    color: '#58A249',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF1')
+  },
+  {
+    code: 'V3',
+    name: 'N/A',
+    value: 3,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF1')
+  },
+  {
+    code: 'V3',
+    name: 'Variable 3',
+    value: 3,
+    color: '#EAF3E8',
     study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF1')
   },
   {
     code: 'V1',
-    name: 'Variavel 1',
-    value: 20,
+    name: 'Índia',
+    value: 64,
     color: '#24890D',
     study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
   },
   {
     code: 'V1',
     name: 'Variable 1',
-    value: 20,
+    value: 64,
     color: '#24890D',
     study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
   },
   {
     code: 'V2',
-    name: 'Variavel 2',
-    value: 80,
-    color: '#91C487',
+    name: 'Nepal',
+    value: 53,
+    color: '#58A249',
     study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
   },
   {
     code: 'V2',
     name: 'Variable 2',
-    value: 80,
-    color: '#91C487',
+    value: 53,
+    color: '#58A249',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
+  },
+  {
+    code: 'V3',
+    name: 'Bangladesh',
+    value: 49,
+    color: '#84B879',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
+  },
+  {
+    code: 'V3',
+    name: 'Variable 3',
+    value: 49,
+    color: '#84B879',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
+  },
+  {
+    code: 'V4',
+    name: 'Cabo Verde',
+    value: 39,
+    color: '#AED1A5',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
+  },
+  {
+    code: 'V4',
+    name: 'Variable 4',
+    value: 39,
+    color: '#AED1A5',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
+  },
+  {
+    code: 'V5',
+    name: 'Guiné Bissau',
+    value: 37,
+    color: '#D7E7D2',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
+  },
+  {
+    code: 'V5',
+    name: 'Variable 5',
+    value: 37,
+    color: '#D7E7D2',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
+  },
+  {
+    code: 'V6',
+    name: 'Outro',
+    value: 58,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
+  },
+  {
+    code: 'V6',
+    name: 'Variable 6',
+    value: 58,
+    color: '#EAF3E8',
     study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF2')
   },
   {
     code: 'V1',
-    name: 'Variavel 1',
-    value: 20,
+    name: '-5 anos',
+    value: 238,
     color: '#24890D',
     study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF3')
   },
   {
     code: 'V1',
     name: 'Variable 1',
-    value: 20,
+    value: 238,
     color: '#24890D',
     study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF3')
   },
   {
     code: 'V2',
-    name: 'Variavel 2',
-    value: 80,
-    color: '#91C487',
+    name: '5 - 10 anos',
+    value: 41,
+    color: '#58A249',
     study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF3')
   },
   {
     code: 'V2',
     name: 'Variable 2',
-    value: 80,
-    color: '#91C487',
+    value: 41,
+    color: '#58A249',
     study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF3')
-  }
+  },
+  {
+    code: 'V3',
+    name: '+10 anos',
+    value: 2,
+    color: '#84B879',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF3')
+  },
+  {
+    code: 'V3',
+    name: 'Variable 3',
+    value: 2,
+    color: '#84B879',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF3')
+  },
+  {
+    code: 'V4',
+    name: 'N/A',
+    value: 19,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF3')
+  },
+  {
+    code: 'V4',
+    name: 'Variable 4',
+    value: 19,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF3')
+  },
+  {
+    code: 'V1',
+    name: 'Não',
+    value: 271,
+    color: '#24890D',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF4')
+  },
+  {
+    code: 'V1',
+    name: 'Variable 1',
+    value: 271,
+    color: '#24890D',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF4')
+  },
+  {
+    code: 'V2',
+    name: 'Sim',
+    value: 28,
+    color: '#58A249',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF4')
+  },
+  {
+    code: 'V2',
+    name: 'Variable 2',
+    value: 28,
+    color: '#58A249',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF4')
+  },
+  {
+    code: 'V3',
+    name: 'N/A',
+    value: 3,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF4')
+  },
+  {
+    code: 'V3',
+    name: 'Variable 3',
+    value: 3,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF4')
+  },
+  {
+    code: 'V1',
+    name: 'Sim',
+    value: 233,
+    color: '#24890D',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF5')
+  },
+  {
+    code: 'V1',
+    name: 'Variable 1',
+    value: 233,
+    color: '#24890D',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF5')
+  },
+  {
+    code: 'V2',
+    name: 'Não',
+    value: 67,
+    color: '#58A249',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF5')
+  },
+  {
+    code: 'V2',
+    name: 'Variable 2',
+    value: 67,
+    color: '#58A249',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF5')
+  },
+  {
+    code: 'V1',
+    name: 'SNS',
+    value: 196,
+    color: '#24890D',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF6')
+  },
+  {
+    code: 'V1',
+    name: 'Variable 1',
+    value: 196,
+    color: '#24890D',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF6')
+  },
+  {
+    code: 'V2',
+    name: 'Ambos',
+    value: 26,
+    color: '#58A249',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF6')
+  },
+  {
+    code: 'V2',
+    name: 'Variable 2',
+    value: 26,
+    color: '#58A249',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF6')
+  },
+  {
+    code: 'V3',
+    name: 'Clínica privada',
+    value: 7,
+    color: '#84B879',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF6')
+  },
+  {
+    code: 'V3',
+    name: 'Variable 3',
+    value: 7,
+    color: '#84B879',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF6')
+  },
+  {
+    code: 'V4',
+    name: 'N/A',
+    value: 6,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF6')
+  },
+  {
+    code: 'V4',
+    name: 'Variable 4',
+    value: 6,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF6')
+  },
+  {
+    code: 'V1',
+    name: 'Centro de Saúde',
+    value: 123,
+    color: '#24890D',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF7')
+  },
+  {
+    code: 'V1',
+    name: 'Variable 1',
+    value: 123,
+    color: '#24890D',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF7')
+  },
+  {
+    code: 'V2',
+    name: 'Ambos',
+    value: 65,
+    color: '#58A249',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF7')
+  },
+  {
+    code: 'V2',
+    name: 'Variable 2',
+    value: 65,
+    color: '#58A249',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF7')
+  },
+  {
+    code: 'V3',
+    name: 'Hospital',
+    value: 26,
+    color: '#84B879',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF7')
+  },
+  {
+    code: 'V3',
+    name: 'Variable 3',
+    value: 26,
+    color: '#84B879',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF7')
+  },
+  {
+    code: 'V4',
+    name: 'N/A',
+    value: 6,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF7')
+  },
+  {
+    code: 'V4',
+    name: 'Variable 4',
+    value: 6,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF7')
+  },
+  {
+    code: 'V1',
+    name: 'Não',
+    value: 147,
+    color: '#24890D',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF8')
+  },
+  {
+    code: 'V1',
+    name: 'Variable 1',
+    value: 147,
+    color: '#24890D',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF8')
+  },
+  {
+    code: 'V2',
+    name: 'Sim',
+    value: 84,
+    color: '#58A249',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF8')
+  },
+  {
+    code: 'V2',
+    name: 'Variable 2',
+    value: 84,
+    color: '#58A249',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF8')
+  },
+  {
+    code: 'V3',
+    name: 'N/A',
+    value: 2,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF8')
+  },
+  {
+    code: 'V3',
+    name: 'Variable 3',
+    value: 2,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF8')
+  },
+  {
+    code: 'V1',
+    name: 'Não',
+    value: 131,
+    color: '#24890D',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF9')
+  },
+  {
+    code: 'V1',
+    name: 'Variable 1',
+    value: 131,
+    color: '#24890D',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF9')
+  },
+  {
+    code: 'V2',
+    name: 'Sim',
+    value: 93,
+    color: '#58A249',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF9')
+  },
+  {
+    code: 'V2',
+    name: 'Variable 2',
+    value: 93,
+    color: '#58A249',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF9')
+  },
+  {
+    code: 'V3',
+    name: 'N/A',
+    value: 9,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF9')
+  },
+  {
+    code: 'V3',
+    name: 'Variable 3',
+    value: 9,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF9')
+  },
+  {
+    code: 'V1',
+    name: 'Recusa por falta de AR',
+    value: 34,
+    color: '#24890D',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF10')
+  },
+  {
+    code: 'V1',
+    name: 'Variable 1',
+    value: 34,
+    color: '#24890D',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF10')
+  },
+  {
+    code: 'V2',
+    name: 'Comunicação',
+    value: 26,
+    color: '#58A249',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF10')
+  },
+  {
+    code: 'V2',
+    name: 'Variable 2',
+    value: 26,
+    color: '#58A249',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF10')
+  },
+  {
+    code: 'V3',
+    name: 'Preço',
+    value: 29,
+    color: '#84B879',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF10')
+  },
+  {
+    code: 'V3',
+    name: 'Variable 3',
+    value: 29,
+    color: '#84B879',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF10')
+  },
+  {
+    code: 'V4',
+    name: 'Inscrição no CS',
+    value: 13,
+    color: '#AED1A5',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF10')
+  },
+  {
+    code: 'V4',
+    name: 'Variable 4',
+    value: 13,
+    color: '#AED1A5',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF10')
+  },
+  {
+    code: 'V5',
+    name: 'Outro',
+    value: 18,
+    color: '#D7E7D2',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF10')
+  },
+  {
+    code: 'V5',
+    name: 'Variable 5',
+    value: 18,
+    color: '#D7E7D2',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF10')
+  },
+  {
+    code: 'V6',
+    name: 'N/A',
+    value: 4,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'PT').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF10')
+  },
+  {
+    code: 'V6',
+    name: 'Variable 6',
+    value: 4,
+    color: '#EAF3E8',
+    study_field: Language.find_by(code: 'ENG').studies.find_by(code: 'S1').study_fields.find_by(code: 'SF10')
+  },
+
 ])
 StudyVariable.all.each do |variable|
   puts "  > [#{variable.name}] created"
