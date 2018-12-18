@@ -13,13 +13,13 @@
     <div class="questions__tab-body">
       <% Current.language.question_topics.each_with_index do |topic, index| %>
         <div class="questions__tab-content <%= '--body-active' if index == 0 %>" data-tab-active="tab-<%= numbers[index + 1] %>">
-          <% topic.questions.each do |question| %>
+          <% topic.questions.order(:code).each do |question| %>
           <div class="questions__tab-questions">
             <div class="questions__tab-question">
-              <p><%= question.question %></p>
+              <p><%= sanitize question.question %></p>
             </div>
             <div class="questions__tab-answer">
-              <p><%= question.answer %></p>
+              <p><%= sanitize question.answer %></p>
             </div>
           </div>
           <% end %>
