@@ -323,8 +323,14 @@ puts "6. Creating Questions"
 Question.create!([
   {
     code: 'Q1',
-    question: 'Sou nacional de Andorra?',
-    answer: LoremIpsum.random(paragraphs: 1),
+    question: 'Sou de Andorra?',
+    answer:"<p>Se exerce uma atividade laboral em Portugal e está inscrito na Segurança Social (tem NISS), então tem direito a aceder ao SNS em condições idênticas aos cidadãos portugueses, bem como a sua família.</p>
+    <br/>
+    <p>Documentos necessários para a inscrição no Centro de Saúde:</p>
+    <ul>
+      <li>Documento de identificação (Ex: passaporte).</li>
+      <li>Atestado comprovativo do protocolo emitido pela entidade competente seu país.</li>
+    </ul>",
     question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T1')
   },
   {
@@ -335,8 +341,16 @@ Question.create!([
   },
   {
     code: 'Q2',
-    question: 'Sou nacional de Angola?',
-    answer: LoremIpsum.random(paragraphs: 1),
+    question: 'Sou de Angola?',
+    answer: "<p>Se o sistema de saúde do meu país não tem capacidade para prestar os cuidados de que necessita tem direito a aceder ao SNS em condições idênticas aos cidadãos portugueses, <b>para o problema médico em questão</b>.</p>
+    <br/>
+    <p>Se surgirem outros problemas de saúde durante a sua estadia em Portugal, não relacionados com o problema que deu origem à sua vinda, terá de pagar pelos cuidados médicos relativos ao tratamento destes novos problemas.</p>
+    <br/>
+    <p>Documentos necessários para a inscrição no Centro de Saúde:</p>
+    <ul>
+      <li>Documento de identificação (Ex: passaporte).</li>
+      <li>Credencial emitida pela Direção-geral da Saúde que comprova que está abrangido pelo acordo de cooperação.</li>
+    </ul>",
     question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T1')
   },
   {
@@ -347,8 +361,14 @@ Question.create!([
   },
   {
     code: 'Q3',
-    question: 'Sou nacional do Brasil?',
-    answer: LoremIpsum.random(paragraphs: 1),
+    question: 'Sou do Brasil?',
+    answer: "<p>Se exerce uma atividade laboral em Portugal e está inscrito na Segurança Social (tem NISS), então tem direito a aceder ao SNS em condições idênticas aos cidadãos portugueses, bem como a sua família.</p>
+    <br/>
+    <p>Documentos necessários para a inscrição no Centro de Saúde:</p>
+    <ul>
+      <li>Documento de identificação (Ex: passaporte).</li>
+      <li>Atestado comprovativo do protocolo emitido pela entidade competente seu país.</li>
+    </ul>",
     question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T1')
   },
   {
@@ -359,8 +379,206 @@ Question.create!([
   },
   {
     code: 'Q4',
-    question: 'Estou em Portugal há mais de 90 dias?',
+    question: 'Sou de Cabo Verde?',
+    answer: "<ol>
+      <li>
+        <p><b>Se exerce uma atividade laboral em Portugal</b> e está inscrito na segurança social Português (tem NISS), então tem direito a aceder ao SNS em condições idênticas aos cidadãos portugueses, bem como a sua família.</p>
+        <br/>
+        <p>Documentos necessários para a inscrição no Centro de Saúde:</p>
+        <ul>
+          <li>Documento de identificação (Ex: passaporte).</li>
+          <li>Atestado comprovativo do protocolo emitido pela entidade competente seu país.</li>
+        </ul>
+      </li>
+      <br/>
+      <li>
+        <p><b>Se o sistema de saúde do meu país não tem capacidade para prestar os cuidados de que necessita</b> tem direito a aceder ao SNS em condições idênticas aos cidadãos portugueses, <b>para o problema médico em questão</b>.</p>
+        <br/>
+        <p>Se surgirem outros problemas de saúde durante a sua estadia em Portugal, não relacionados com o problema que deu origem à sua vinda, terá de pagar pelos cuidados médicos relativos ao tratamento destes novos problemas.</p>
+        <br/>
+        <p>Documentos necessários para a inscrição no Centro de Saúde:</p>
+        <ul>
+          <li>Documento de identificação (Ex: passaporte).</li>
+          <li>Credencial emitida pela Direção-geral da Saúde que comprova que está abrangido pelo acordo de cooperação.</li>
+        </ul>
+      </li>
+    </ol>",
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q4',
+    question: 'Question 4',
     answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q5',
+    question: 'Sou de Guiné Bissau?',
+    answer: "<p>Se o sistema de saúde do meu país não tem capacidade para prestar os cuidados de que necessita tem direito a aceder ao SNS em condições idênticas aos cidadãos portugueses, <b>para o problema médico em questão</b>.</p>
+    <br/>
+    <p>Se surgirem outros problemas de saúde durante a sua estadia em Portugal, não relacionados com o problema que deu origem à sua vinda, terá de pagar pelos cuidados médicos relativos ao tratamento destes novos problemas.</p>
+    <br/>
+    <p>Documentos necessários para a inscrição no Centro de Saúde:</p>
+    <ul>
+      <li>Documento de identificação (Ex: passaporte).</li>
+      <li>Credencial emitida pela Direção-geral da Saúde que comprova que está abrangido pelo acordo de cooperação.</li>
+    </ul>",
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q5',
+    question: 'Question 5',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q6',
+    question: 'Sou de Marrocos?',
+    answer: "<p>Se exerce uma atividade laboral em Portugal e está inscrito na Segurança Social (tem NISS), então tem direito a aceder ao SNS em condições idênticas aos cidadãos portugueses, bem como a sua família.</p>
+    <br/>
+    <p>Documentos necessários para a inscrição no Centro de Saúde:</p>
+    <ul>
+      <li>Documento de identificação (Ex: passaporte).</li>
+      <li>Atestado comprovativo do protocolo emitido pela entidade competente seu país.</li>
+    </ul>",
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q6',
+    question: 'Question 6',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q7',
+    question: 'Sou de Moçambique?',
+    answer: "<p>Se o sistema de saúde do meu país não tem capacidade para prestar os cuidados de que necessita tem direito a aceder ao SNS em condições idênticas aos cidadãos portugueses, <b>para o problema médico em questão</b>.</p>
+    <br/>
+    <p>Se surgirem outros problemas de saúde durante a sua estadia em Portugal, não relacionados com o problema que deu origem à sua vinda, terá de pagar pelos cuidados médicos relativos ao tratamento destes novos problemas.</p>
+    <br/>
+    <p>Documentos necessários para a inscrição no Centro de Saúde:</p>
+    <ul>
+      <li>Documento de identificação (Ex: passaporte).</li>
+      <li>Credencial emitida pela Direção-geral da Saúde que comprova que está abrangido pelo acordo de cooperação.</li>
+    </ul>",
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q7',
+    question: 'Question 7',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q8',
+    question: 'Sou do Quebec?',
+    answer: "<p>Se exerce uma atividade laboral em Portugal e está inscrito na Segurança Social (tem NISS), então tem direito a aceder ao SNS em condições idênticas aos cidadãos portugueses, bem como a sua família.</p>
+    <br/>
+    <p>Documentos necessários para a inscrição no Centro de Saúde:</p>
+    <ul>
+      <li>Documento de identificação (Ex: passaporte).</li>
+      <li>Atestado comprovativo do protocolo emitido pela entidade competente seu país.</li>
+    </ul>",
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q8',
+    question: 'Question 8',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q9',
+    question: 'Sou de São Tomé e Príncipe?',
+    answer: "<p>Se o sistema de saúde do meu país não tem capacidade para prestar os cuidados de que necessita tem direito a aceder ao SNS em condições idênticas aos cidadãos portugueses, <b>para o problema médico em questão</b>.</p>
+    <br/>
+    <p>Se surgirem outros problemas de saúde durante a sua estadia em Portugal, não relacionados com o problema que deu origem à sua vinda, terá de pagar pelos cuidados médicos relativos ao tratamento destes novos problemas.</p>
+    <br/>
+    <p>Documentos necessários para a inscrição no Centro de Saúde:</p>
+    <ul>
+      <li>Documento de identificação (Ex: passaporte).</li>
+      <li>Credencial emitida pela Direção-geral da Saúde que comprova que está abrangido pelo acordo de cooperação.</li>
+    </ul>",
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q9',
+    question: 'Question 9',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q10',
+    question: 'Sou da Tunísia?',
+    answer: "<p>Se exerce uma atividade laboral em Portugal e está inscrito na Segurança Social (tem NISS), então tem direito a aceder ao SNS em condições idênticas aos cidadãos portugueses, bem como a sua família.</p>
+    <br/>
+    <p>Documentos necessários para a inscrição no Centro de Saúde:</p>
+    <ul>
+      <li>Documento de identificação (Ex: passaporte).</li>
+      <li>Atestado comprovativo do protocolo emitido pela entidade competente seu país.</li>
+    </ul>",
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q10',
+    question: 'Question 10',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T1')
+  },
+  {
+    code: 'Q1',
+    question: 'Estou em Portugal há mais de 90 dias?',
+    answer: "<p>Se estiver em Portugal há mais de 90 dias, <b>já não é considerado um turista</b>.</p>
+    <br/>
+    <p><b>Se estiver em Portugal há menos de 90 dias</b> terá de pagar por todos os cuidados de saúde e não se poderá inscrever no Centro de Saúde</p>",
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T2')
+  },
+  {
+    code: 'Q1',
+    question: 'Question 1',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T2')
+  },
+  {
+    code: 'Q2',
+    question: 'Que documentos tenho de apresentar para me inscrever no Centro de Saúde?',
+    answer: "
+    <ul>
+      <li>Documento de identificação (Ex: passaporte).</li>
+      <li>Atestado de residência emitido pela Junta de Freguesia da sua área de redidência, que confirme que está em Portugal há mais de 90 dias.</li>
+    </ul>
+    ",
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T2')
+  },
+  {
+    code: 'Q2',
+    question: 'Question 2',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T2')
+  },
+  {
+    code: 'Q3',
+    question: 'O que é preciso para obter o atestado de residência?',
+    answer: "
+    <p>Precisa de duas testemunhas também residentes na sua Freguesia, que podem ser seus amigos ou vizinhos, mas também pessoas que trabalham no comércio e serviços com quem tenha uma interação regular.</p>
+    <p><b>As testemulhas não precisam de estar presencialmente para a emição do atestado </b>, podem fazer uma declaração de honra.</p>
+    ",
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T2')
+  },
+  {
+    code: 'Q3',
+    question: 'Question 3',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T2')
+  },
+  {
+    code: 'Q4',
+    question: 'O que tenho de pagar?',
+    answer: "
+    <p>Não estando ao abrigo de nenhum acordo bilateral (Ver acordos com países) tem de pagar na totalidade pelas <b>consultas e exames realizados</b>.</p>
+    <br>
+    <p><b>No entanto, pode pedir para pagar mais tarde, solicitando que a fatura lhe seja enviada por correio.</b></p>
+    ",
     question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T2')
   },
   {
@@ -371,8 +589,42 @@ Question.create!([
   },
   {
     code: 'Q5',
-    question: 'Que documentos tenho de apresentar para me inscrever no CS?',
-    answer: LoremIpsum.random(paragraphs: 1),
+    question: 'Quando é que não tenho de pagar?',
+    answer: "
+    <p>Não tem de pagar nas seguintes situações:</p>
+      <ul>
+        <li>
+          <p>Cuidados de saúde urgentes e vitais</p>
+          <p>Exemplos: Chamar o INEM (112), Doentes diabéticos, etc...</p>
+        </li>
+        <br/>
+        <li>
+          <p>Doenças transmissíveis que representem perigo para a saúde pública</p>
+          <p>Exemplos: HIV/Sida, Tuberculose, etc...</p>
+        </li>
+        <br/>
+        <li>
+          <p>Cuidados no âmbito da saúde materno-infantil e saúde reprodutiva </p>
+          <p>- Consultas de planeamento familiar</p>
+          <p>- Interrupção voluntária da gravidez</p>
+          <p>- Acompanhamento da mulher durante a gravidez, parto e pós-parto</p>
+          <p>- Cuidados de saúde aos recém-nascidos</p>
+        </li>
+        <br/>
+        <li>
+          <p>Cuidados de saúde a menores de 18 anos residentes em Portugal mediante apresentaçao de declaração emitida pelo ACM </p>
+        </li>
+        <br/>
+        <li>
+          <p>Vacinação, conforme o Plano Nacional de Vacinação em vigor </p>
+        </li>
+        <br/>
+        <li>
+          <p>Cidadãos em situação de exclusão social ou em situação de carência económica, de acordo com comprovativo a emitir pela Segurança Social</p>
+          <p>Exemplos: Sem-abrigo, etc...</p>
+        </li>
+      </ul>
+    ",
     question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T2')
   },
   {
@@ -383,37 +635,138 @@ Question.create!([
   },
   {
     code: 'Q6',
-    question: 'Pergunta 6',
-    answer: LoremIpsum.random(paragraphs: 1),
-    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T3')
+    question: "<b>O que posso fazer se algum destes direitos não for respeitado?</b>",
+    answer: "<p>Deve pedir o <b>Livro de Reclamações</b> e formalizar a reclamação por escrito. Se não lhe entregarem o Livro de Reclamações pode chamar a polícia</p>
+    <br/>
+    <p>Pode também apresentar queixa junto das seguintes entidades:</p>
+    <p><a href='https://www.ers.pt/pages/50'>Entidade Reguladora da Saúde (ERS)</a></p>
+    <p><span><a href='https://www.cicdr.pt/queixa'>Comissão para a Igualdade e Contra a Descriminação Racial (CICDR)</a></span><span> Só para situações de discriminação com base na origem racial e étnica, cor, nacionalidade, ascendência ou território de origem</span></p>
+    <p><a href='https://servicos.provedor-jus.pt:7777/Frontoffice/Forms/FormDetails.aspx?Tipo=NovoPedido&FormularioId=7'>Provedor de Justiça</a></p>",
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T2')
   },
   {
     code: 'Q6',
     question: 'Question 6',
     answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T2')
+  },
+  {
+    code: 'Q1',
+    question: 'Tabela de preços',
+    answer: "
+    <table>
+      <tr>
+        <th>Designação</th>
+        <th>Taxa Moderadora</th>
+        <th>Preço Completo</th>
+      </tr>
+      <tr>
+        <td>Consulta de medicina geral e
+    familiar ou outra consulta
+    médica que não a de
+    especialidade</td>
+        <td>4,5€</td>
+        <td>31€</td>
+      </tr>
+      <tr>
+        <td>Consulta de enfermagem ou
+    de outros profissionais de
+    saúde realizada no âmbito
+    dos cuidados de saúde
+    primários</td>
+        <td>3,5€</td>
+        <td>16€</td>
+      </tr>
+      <tr>
+        <td>Consulta de enfermagem ou
+    de outros profissionais de
+    saúde realizada no âmbito
+    hospitalar</td>
+        <td>4,5€</td>
+        <td>16€</td>
+      </tr>
+      <tr>
+        <td>Consulta de especialidade</td>
+        <td>7€</td>
+        <td>31€</td>
+      </tr>
+      <tr>
+        <td>Consulta no domicílio</td>
+        <td>9€</td>
+        <td>33,10€</td>
+      </tr>
+      <tr>
+        <td>Consulta médica sem a
+    presença do utente</td>
+        <td>2,5€</td>
+        <td>25€</td>
+      </tr>
+      <tr>
+        <td>Serviço de Urgência
+    Polivalente</td>
+        <td>18€</td>
+        <td>112,07€</td>
+      </tr>
+      <tr>
+        <td>Serviço de Urgência Médico-
+    Cirúrgica</td>
+        <td>16€</td>
+        <td>85,91€</td>
+      </tr>
+      <tr>
+        <td>Serviço de Urgência Básica</td>
+        <td>14€</td>
+        <td>51,00€</td>
+      </tr>
+    </table>",
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T3')
+  },
+  {
+    code: 'Q1',
+    question: 'Question 1',
+    answer: LoremIpsum.random(paragraphs: 1),
     question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T3')
   },
   {
-    code: 'Q7',
-    question: 'Vacinação',
-    answer: LoremIpsum.random(paragraphs: 1),
+    code: 'Q1',
+    question: 'Número de Utente',
+    answer: "
+    <p>O número de utente é o número de registo no Serviço Nacional de Saúde (SNS) que permite identificar o seu titular perante as instituições e serviços integrados no SNS.</p>
+    <br/>
+    <p>Só têm direito ao número de utente as pessoas que têm autorização de residência ou visto de residência (incluindo situações de reagrupamento familiar).</p>",
     question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T4')
   },
   {
-    code: 'Q7',
-    question: 'Question 7',
+    code: 'Q1',
+    question: 'Question 1',
     answer: LoremIpsum.random(paragraphs: 1),
     question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T4')
   },
   {
-    code: 'Q8',
-    question: 'Urgências',
-    answer: LoremIpsum.random(paragraphs: 1),
+    code: 'Q2',
+    question: 'Taxas moderadoras',
+    answer: "
+    <p>As taxas moderadoras são os valores cobrados nos serviços de saúde públicos, com vista a atenuar os encargos que o Estado tem com o Serviço Nacional de Saúde.</p>
+    ",
     question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T4')
   },
   {
-    code: 'Q8',
-    question: 'Question 8',
+    code: 'Q2',
+    question: 'Question 2',
+    answer: LoremIpsum.random(paragraphs: 1),
+    question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T4')
+  },
+  {
+    code: 'Q3',
+    question: 'Linha SNS 24',
+    answer: "
+    <p>Ligue para o <b>808-24-24-24</b> quando precisar de esclarecimentos sobre situações de doença.</p>
+    ",
+    question_topic: Language.find_by(code: 'PT').question_topics.find_by(code: 'T4')
+  },
+  {
+    code: 'Q3',
+    question: 'Question 3',
     answer: LoremIpsum.random(paragraphs: 1),
     question_topic: Language.find_by(code: 'ENG').question_topics.find_by(code: 'T4')
   },
